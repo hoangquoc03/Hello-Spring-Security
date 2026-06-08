@@ -13,7 +13,9 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    private String role;
+    private String fullName;
+
+    private String role = "USER";
 
     private boolean enabled = true;
 
@@ -54,6 +56,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getRole() {
